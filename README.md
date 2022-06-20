@@ -1,3 +1,4 @@
-# Hop, Skip, and a Jump
+# Jump
 
-This is a set of three terminal functions that will speed up your terminal workflow.
+Jump is a terminal function that will speed up your workflow by quickly going to commonly visited websites.
+
