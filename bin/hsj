@@ -1,8 +1,10 @@
+#!/bin/zsh
+
 jump() {
   # echo -n "\033[A\033[2K"
 
-  ~/scripts/jump/bin/getDirs $1
-  local dir=$(cat ~/scripts/jump/store/jumpDir.txt)
+  ~/scripts/hop-skip-jump/bin/getDirs $1
+  local dir=$(cat ~/scripts/hop-skip-jump/store/jumpDir.txt)
 
   if [[ ! -z $dir ]]; then
     # print -P "$PROMPT\0%F{2}cd%f %U~/$dir%u"

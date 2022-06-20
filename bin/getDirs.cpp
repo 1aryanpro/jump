@@ -67,7 +67,7 @@ int main(int argc, char **argv) {
 
   if (resSize == 1) {
     char *cmd;
-    int len = asprintf(&cmd, "echo '%s' > ~/scripts/jump/store/jumpDir.txt",
+    int len = asprintf(&cmd, "echo '%s' > ~/scripts/hop-skip-jump/store/jumpDir.txt",
                        results[0].c_str());
     system(cmd);
     return 0;
