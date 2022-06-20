@@ -1,0 +1,15 @@
+jump() {
+  # echo -n "\033[A\033[2K"
+
+  ~/scripts/jump/bin/getDirs $1
+  local dir=$(cat ~/scripts/jump/store/jumpDir.txt)
+
+  if [[ ! -z $dir ]]; then
+    # print -P "$PROMPT\0%F{2}cd%f %U~/$dir%u"
+    # print -s "cd ~/$dir"
+    cd $dir
+  else
+    return 1
+  fi
+}
+alias j='jump'
