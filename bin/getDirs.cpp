@@ -40,8 +40,10 @@ bool fzf(string src, string cmp) {
 
 int main(int argc, char **argv) {
 
-  vector<string> output = exec("find ~/.config ~/Documents/Github ~/Desktop "
-                               "-type d -maxdepth 1 -mindepth 0");
+  vector<string> output =
+      exec("find ~/.config ~/Documents/Github ~/Desktop ~/Sketches -type d "
+           "-maxdepth 1 -mindepth 0 & find ~/Downloads -type d -maxdepth 0 "
+           "-mindepth 0");
   int count = output.size();
   string dirs[count];
   string paths[count];
@@ -72,7 +74,7 @@ int main(int argc, char **argv) {
     system(cmd);
     return 0;
   }
-  
+
   system("echo '.' > ~/scripts/jump/store/jumpDir.txt");
 
   if (resSize == 0) {
